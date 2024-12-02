@@ -17,18 +17,29 @@
     <header>
         <!-- place navbar here -->
     </header>
-    <main>
+    <main class="body">
+        <div class="container-fluid"></div>
+        <div class="row col-12"></div>
 
         <div id="magic-8-ball" class="container text-center my-auto">
             <h1 id="greeting">Magic 8 Ball</h1>
             <div id="response-text">Ask a question!</div>
-            <img id="response-image" class="img-fluid" src="https://picsum.photos/id/1025/600/400" alt="">
-            <button onclick="shakeMagic8Ball()" class="btn btn-danger">Shake the Magic 8 Ball!</button>
+            <img class="images" id="response-image" class="img-fluid" src="8 ball.jpg" alt="">
+            <div>
+                <button onclick="shakeMagic8Ball()" class="btn btn-danger">Shake the Magic 8 Ball!</button>
+            </div>
         </div>
     </main>
-    <footer>
-        <!-- place footer here -->
+    <footer class="feet">
+        <div class="container-fluid">
+            <footer class="py-3 mt-4">
+                <p class="text-center text-body-secondary">This website is an 8 ball project. State a question and the
+                    MIGHTY 8 BALL shall answer your question!</p>
+                <p class="text-center text-body-secondary">Salvatore DiPalma</p>
+            </footer>
+        </div>
     </footer>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
