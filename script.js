@@ -1,7 +1,7 @@
 let userName = prompt("Hi! Who are you?");
 userName
-  ? (document.getElementById("greeting").innerText = `Hello, ${userName}`)
-  : (document.getElementById("greeting").innerText = "Hello!");
+  ? (document.getElementById("greeting").innerText = `Hey ${userName}`)
+  : (document.getElementById("greeting").innerText = "Hi!");
 
 function shakeMagic8Ball() {
   let randomNumber = Math.floor(Math.random() * 8);
@@ -11,35 +11,35 @@ function shakeMagic8Ball() {
 
   switch (randomNumber) {
     case 0:
-      eightball = "It is certain";
+      eightball = "it is certain";
       responseImg = "it is certain.jpg";
       break;
     case 1:
-      eightball = "It is decidely so";
+      eightball = "it is decidely so";
       responseImg = "It is decidely so.jpg";
       break;
     case 2:
-      eightball = "Reply hazy try again";
+      eightball = "reply hazy try again";
       responseImg = "reply hazy try again.jpg";
       break;
     case 3:
-      eightball = "Cannot predict now";
+      eightball = "cannot predict now";
       responseImg = "Cannot predict now.jpg";
       break;
     case 4:
-      eightball = "Do not count on it";
+      eightball = "do not count on it";
       responseImg = "Do not count on it.jpg";
       break;
     case 5:
-      eightball = "My sources say no";
+      eightball = "my sources say no";
       responseImg = "My sources say no.jpg";
       break;
     case 6:
-      eightball = "Signs point to yes";
+      eightball = "signs point to yes";
       responseImg = "Signs point to yes.jpg";
       break;
     case 7:
-      eightball = "It is certain";
+      eightball = "it is certain";
       responseImg = "it is certain.jpg";
       break;
   }
