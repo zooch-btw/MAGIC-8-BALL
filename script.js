@@ -1,7 +1,7 @@
 let userName = prompt("Hi! Who are you?");
 userName
-  ? (document.getElementById("greeting").innerText = `Hey ${userName}`)
-  : (document.getElementById("greeting").innerText = "Hi!");
+  ? (document.getElementById("greeting").innerHTML = `Hello ${userName}`)
+  : (document.getElementById("greeting").innerHTML = "Hi!");
 
 function shakeMagic8Ball() {
   let randomNumber = Math.floor(Math.random() * 8);
@@ -11,42 +11,50 @@ function shakeMagic8Ball() {
 
   switch (randomNumber) {
     case 0:
+      responseImg = "It is certain.jpg";
       eightball = "it is certain";
-      responseImg = "it is certain.jpg";
       break;
     case 1:
+      responseImg = "it is decidely so.jpg";
       eightball = "it is decidely so";
-      responseImg = "It is decidely so.jpg";
       break;
     case 2:
-      eightball = "reply hazy try again";
       responseImg = "reply hazy try again.jpg";
+      eightball = "reply hazy try again";
       break;
     case 3:
-      eightball = "cannot predict now";
       responseImg = "Cannot predict now.jpg";
+      eightball = "cannot predict now";
       break;
     case 4:
-      eightball = "do not count on it";
       responseImg = "Do not count on it.jpg";
+      eightball = "do not count on it";
       break;
     case 5:
-      eightball = "my sources say no";
       responseImg = "My sources say no.jpg";
+      eightball = "my sources say no";
       break;
     case 6:
-      eightball = "signs point to yes";
       responseImg = "Signs point to yes.jpg";
+      eightball = "signs point to yes";
       break;
     case 7:
-      eightball = "it is certain";
       responseImg = "it is certain.jpg";
+      eightball = "it is certain";
       break;
   }
 
   console.log(`${eightball}`);
-  document.getElementById(
-    "response-text"
-  ).innerText = `${userName} has asked the Magic 8 Ball ${userQuestion}. The wise and wondrous 8 Ball has replied with ${eightball}`;
-  document.getElementById("response-image").src = responseImg;
+
+  if (userQuestion) {
+    document.getElementById(
+      "rsptxt"
+    ).innerHTML = `${userName} asked the Magic 8 Ball: ${userQuestion}. The wise and wondrous 8 Ball has replied with: ${eightball}`;
+  } else {
+    document.getElementById(
+      "rsptxt"
+    ).innerHTML = `You asked the Magic 8 Ball: nothing. The Magic 8 Ball feels bad, so it replies with: ${eightball}`;
+  }
+
+  document.getElementById("rspimg").src = responseImg;
 }
